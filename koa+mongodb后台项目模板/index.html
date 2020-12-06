@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="num1" />
+      <p>{{num2}}</p>
+    </div>
+    <script>
+      let mv = new Vue({
+        el: "#app",
+        data() {
+          return {
+            num1: 123,
+          };
+        },
+        computed: {
+          num2: function () {
+            return this.num1 + "num2";
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
